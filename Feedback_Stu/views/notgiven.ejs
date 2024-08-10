@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <style>
+        
+        body{
+            font-family: 'Poppins';   
+        }
+        table {
+        border-collapse: collapse;
+        width: 60%;
+        }
+        th, td {
+        text-align: left;
+        padding: 8px;
+        }
+        th {
+        background-color: #242e39;
+        color: white;
+        font-size: 15px;
+        font-weight: 100;
+        }
+        tr:not(:last-child) {
+        border-bottom: 1px dotted rgb(103, 98, 98);
+    }
+    </style>
+</head>
+<body>
+    
+    <br>
+    <table class="sub">
+        <tr>
+            <th>#</th>
+            <th>RollNo</th>
+            <th>Name</th>
+           
+        </tr>
+        
+       <% for (let i = 0; i <sem31Data.length; i++) { %>
+        <tr>
+            <td><%= i + 1 %></td>
+            <td><%=sem31Data[i].rollno %></td>
+            <td><%=sem31Data[i].name %></td>
+        </tr>
+    <% } %>
+    <% for (let j = 0; j < sem32Data.length; j++) { %>
+        <tr>
+            <td><%= j + 1 %></td>
+            <td><%= sem32Data[j].rollno %></td>
+            <td><%= sem32Data[j].name %></td>
+        </tr>
+    <% } %>
+        
+        
+    </table>
+  
+</body>
+
+</html>
